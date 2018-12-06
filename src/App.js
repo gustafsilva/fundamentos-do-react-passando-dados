@@ -102,6 +102,8 @@ const movies = {
 
 class App extends Component {
   render() {
+    const favoriteMovies = getFavoriteMovies(profiles, users, movies);
+
     return (
       <div>
         <header className="App-header">
@@ -109,7 +111,7 @@ class App extends Component {
           <h1 className="App-title">ReactND - Coding Practice</h1>
         </header>
         <h2>Favorite M'ovies</h2>
-		<ListFavoriteMovies favoriteMovies={getFavoriteMovies(profiles, users, movies)} />
+        <ListFavoriteMovies favoriteMovies={favoriteMovies} />
       </div>
     );
   }
